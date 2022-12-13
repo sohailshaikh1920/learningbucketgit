@@ -1,0 +1,4 @@
+simple powerfull and agentless
+docs.ansible.com
+https://www.osboxes.org/ : for preconfigured os images
+mobaxterm for ssh session manager

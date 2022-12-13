@@ -1,0 +1,2 @@
+push code to github
+integrate git with jenkins and create pipeline so that when changes are pushed to github it will create new docker image and push to docker repo
