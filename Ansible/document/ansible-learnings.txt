@@ -2,3 +2,31 @@ simple powerfull and agentless
 docs.ansible.com
 https://www.osboxes.org/ : for preconfigured os images
 mobaxterm for ssh session manager
+
+controller node 
+
+apt install ansible
+
+default directory
+
+sohail@ansiblecontroler:/etc/ansible$ ll
+total 32
+drwxrwxrwx   2 root root  4096 Dec 14 11:39 ./
+drwxr-xr-x 100 root root  4096 Dec 14 11:39 ../
+-rw-r--r--   1 root root 19985 Mar  5  2020 ansible.cfg
+-rw-r--r--   1 root root   982 Dec 18  2018 hosts
+sohail@ansiblecontroler:/etc/ansible$ pwd
+/etc/ansible
+sohail@ansiblecontroler:/etc/ansible$
+
+
+target node
+
+apt install python
+
+/etc/ansible/hosts
+
+node01 ansible_host=192.168.16.201 ansible_ssh_pass=root123
+node02 ansible_host=192.168.16.202 ansible_ssh_pass=root123
+
+ansible node01 -m ping
