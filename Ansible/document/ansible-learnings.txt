@@ -2,7 +2,7 @@ simple powerfull and agentless
 docs.ansible.com
 https://www.osboxes.org/ : for preconfigured os images
 mobaxterm for ssh session manager
-
+----------------------------------------------------------------------
 controller node 
 
 apt install ansible
@@ -19,10 +19,18 @@ sohail@ansiblecontroler:/etc/ansible$ pwd
 /etc/ansible
 sohail@ansiblecontroler:/etc/ansible$
 
+for ssh passwordless login 
+
+ssh-keygen -t rsa -b 4096
+ssh-copy-id sohail@192.168.16.201
+ssh sohail@192.168.16.201
+------------------------------------------------------------------
 
 target node
 
 apt install python
+
+-----------------------------------------------------------------
 
 /etc/ansible/hosts
 
