@@ -32,9 +32,38 @@ apt install python
 
 -----------------------------------------------------------------
 
-/etc/ansible/hosts
+/etc/ansible/hosts<defaultinventoryfile>
 
 node01 ansible_host=192.168.16.201 ansible_ssh_pass=root123
 node02 ansible_host=192.168.16.202 ansible_ssh_pass=root123
 
-ansible node01 -m ping
+ansible node01 -m<module> ping
+
+playbook is written in yaml 
+
+ansible all -a<module_argument> hostname -i<specificinventoryfile> filename.txt
+
+[target]
+node01 ansible_host=192.168.16.201
+node02 ansible_host=192.168.16.202
+
+ansible target -a id
+
+sohail@ansiblecontroler:~/ansible$ cat firstplaybook.yml<yaml or yml>
+-
+  name: ping test<name of play>
+  hosts: target<host on which play is going to run>
+  tasks:<task to be run in play>
+    - name: ping test
+      ping:<ansible module>
+
+Ansible Modules :
+system 
+commands
+files
+database
+cloud
+windows
+more
+
+
