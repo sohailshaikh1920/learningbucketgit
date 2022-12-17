@@ -162,6 +162,37 @@ sohail@ansiblecontroler:~/ansible$ cat fourthplaybook.yaml
 
 sohail@ansiblecontroler:~/ansible$
 
+variables from setup module output gathered by ansible
+
+sohail@ansiblecontroler:~/ansible$ cat variablefromsetupmodule.yaml
+---
+
+- name: variables use
+  hosts: target
+  tasks:
+
+     - name: print os
+       debug:
+          msg: " os is {{ ansible_facts<default name>['distribution<user attributes which is after _'] }}"
+
+sohail@ansiblecontroler:~/ansible$
+
+magic variables
+check details on ansible site basically these are predefined varibles which can be leveraged in playbook
+
+sohail@ansiblecontroler:~/ansible$ cat magic.yaml
+---
+
+- name: magic variable
+  hosts: node01
+  tasks:
+     - name: avail variable
+       debug:
+               var: hostvars['node02']
+sohail@ansiblecontroler:~/ansible$
+
+
+
 
 
 
