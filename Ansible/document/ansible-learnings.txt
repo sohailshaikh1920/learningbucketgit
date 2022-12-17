@@ -44,7 +44,7 @@ playbook is written in yaml
 ansible all -a<module_argument> hostname -i<specificinventoryfile> filename.txt
 
 [target]
-node01 ansible_host=192.168.16.201
+node01 ansible_host=192.168.16.201 ansible_ssh_user=sohail ansible_ssh_pass=root123
 node02 ansible_host=192.168.16.202
 
 ansible target -a id
@@ -65,5 +65,106 @@ database
 cloud
 windows
 more
+
+create file 
+
+ansible node02 -m file -a "dest=/home/sohail/test.txt mode=700 state=touch"
+
+core components :
+
+controller node
+managed node
+module
+inventory
+task
+playbook 
+
+playbook to run sudo root user
+sohail@ansiblecontroler:~/ansible$ cat secondplaybook.yaml
+---
+
+- name: install and start httpd
+  hosts: target
+  become: yes<default is root>
+  tasks:
+     - name: install httpd
+       yum: name=webfs state=latest
+
+
+     - name: start httpd
+       service: name=webfs state=started
+sohail@ansiblecontroler:~/ansible$ 
+
+ansible-playbook secondplaybook.yaml --ask-become-pass
+
+to get info about any node
+
+ansible node01 -m setup
+
+user of variables in playbook
+
+sohail@ansiblecontroler:~/ansible$ cat fourthplaybook.yaml
+---
+
+- name: variables use
+  hosts: target
+  vars:
+     dir: mydir
+     file: myfile
+  tasks:
+     - name: create dir
+       file:
+          path: "/home/sohail/{{ dir }}"
+          state: directory
+
+     - name: create file
+       file:
+          path: "/home/sohail/{{ dir }}/{{ file }}"
+          state: touch
+
+
+sohail@ansiblecontroler:~/ansible$
+
+Dynamic inventory:
+is usefull when you want to popolate existing infrasture and work with that, it can be on any cloud or on-prem
+there are 2 ways to do that one is plugin and second is script and both of them is available on ansible documentation
+page
+
+practice this with cloud inventory
+
+defining variable in file and defining file in playbook
+
+sohail@ansiblecontroler:~/ansible$ cat variables.yaml<can be any name with .yaml>
+data: 
+   dir: mydir
+   file: myfile
+sohail@ansiblecontroler:~/ansible$
+
+sohail@ansiblecontroler:~/ansible$ cat fourthplaybook.yaml
+---
+
+- name: variables use
+  hosts: target
+  vars_files:
+     - variables.yaml
+
+  tasks:
+     - name: create dir
+       file:
+          path: "/home/sohail/{{ data['dir'] }}"
+          state: directory
+
+     - name: create file
+       file:
+          path: "/home/sohail/{{ data['dir'] }}/{{ data['file'] }}"
+          state: touch
+
+
+sohail@ansiblecontroler:~/ansible$
+
+
+
+
+
 
 
