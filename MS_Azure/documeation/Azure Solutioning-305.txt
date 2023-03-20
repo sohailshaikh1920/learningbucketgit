@@ -417,16 +417,6 @@ Container deployement option :
 2. container on ACI
 3. Container on AKS
 
-Kubernetes :
 
-components :
-
-Master node : manages deployement calls on nodes
-node : node where container runs
-apiserver : all calls to master happens through apiserver
-etcd : store cluster state
-kubelet : agent runs on node and register it with master , take commands from master to deploy container on nodes
-container runtime : taking image and deploying container on nodes
-kube-proxy : manages networking
 
   
