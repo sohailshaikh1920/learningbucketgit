@@ -8,6 +8,18 @@ etcd : key value store stores metadata about all master and workers and also mai
 scheduler : to schedule all jobs in cluster
 API server : use for cli and connection to k8s cluster
 
+Kubernetes :
+
+components :
+
+Master node : manages deployement calls on nodes
+node : node where container runs
+apiserver : all calls to master happens through apiserver
+etcd : store cluster state
+kubelet : agent runs on node and register it with master , take commands from master to deploy container on nodes
+container runtime : taking image and deploying container on nodes
+kube-proxy : manages networking
+
 deployement types :
 
 https://www.padok.fr/en/blog/minikube-kubeadm-kind-k3s
