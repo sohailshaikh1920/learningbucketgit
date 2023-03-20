@@ -40,7 +40,7 @@ selected
 Service map :
 
 have to install dependency agent on vm's , it can be used for mapping of all services with target VM like inbound
-\outbound traffic and process etc
+\outbound traffic and process etc.
 
 SQL diagnostic logs :
 
