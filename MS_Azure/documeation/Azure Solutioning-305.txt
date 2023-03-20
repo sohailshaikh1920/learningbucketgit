@@ -16,8 +16,8 @@ azure monitor service can be used to create alert on logs,events etc
 log analytics workspace :
 
 agent based tool to move logs from azure vm or prem vm like syslog or splunk
-provide great flexiblity and one stop for all azure logs and treated as resource in RG and worked as container for diff logs
-you can query different logs with predefined or you custom queries
+provide great flexiblity and one stop for all azure logs and treated as resource in RG and worked as container for
+diff logs, you can query different logs with predefined or you custom queries
 
 NSG flow logs :
 
@@ -34,12 +34,13 @@ AD logs
 
 Traffic Analysis :
 
-can be enabled as part of flow logs and have to mapped with LAW and it will give graphical view of traffic on NSG selected
+can be enabled as part of flow logs and have to mapped with LAW and it will give graphical view of traffic on NSG 
+selected
 
 Service map :
 
-have to install dependency agent on vm's , it can be used for mapping of all services with target VM like inbound\outbound
-traffic and process etc
+have to install dependency agent on vm's , it can be used for mapping of all services with target VM like inbound
+\outbound traffic and process etc
 
 SQL diagnostic logs :
 
