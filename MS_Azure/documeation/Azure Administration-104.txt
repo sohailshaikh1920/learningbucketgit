@@ -14,8 +14,9 @@ for payment method and cost details
 
 Resource group :
 
-is a logical container and resources inside can be deployed to different regions , deleting RG means deleting all resource inside it so ideally
-resource should be protected by apply locks , one resource can belong to one RG
+is a logical container and resources inside can be deployed to different regions , deleting RG means deleting 
+all resource inside it so ideally resource should be protected by applying locks , one resource can belong to one 
+RG
 
 Azure limits :
 https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits
@@ -30,7 +31,8 @@ RG is associated with one region where it stores metadata but it can have resour
 
 IAM :
 
-Azure AD is default directory services provided when you create your account and all users and group will reside in AAD
+Azure AD is default directory services provided when you create your account and all users and group will reside 
+in AAD
 
 sohail@sohailshaikh1920gmail.onmicrosoft.com
 Xabo1679
