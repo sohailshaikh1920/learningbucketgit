@@ -75,10 +75,10 @@ Security orchestration, automation, and response (SOAR)
 
 Collect data at cloud scale across all users, devices, applications, and infrastructure, both on-premises
 and in multiple clouds
-Detect previously undetected threats, and minimize false positives using Microsoft's analytics and unparalleled threat
-intelligence
-Investigate threats with artificial intelligence, and hunt for suspicious activities at scale, tapping into years of
-cyber security work at Microsoft
+Detect previously undetected threats, and minimize false positives using Microsoft's analytics and unparalleled 
+threat intelligence
+Investigate threats with artificial intelligence, and hunt for suspicious activities at scale, tapping into years 
+of cyber security work at Microsoft
 Respond to incidents rapidly with built-in orchestration and automation of common tasks
 
 can be used for azure on-prem or AWS resources
@@ -161,7 +161,8 @@ Alerts –You can also get alerts with enhanced security features
 Defender JIT (just in time) vm access :
 
 you can add vm to workload protection and enable JIT for specific duration & port
-this will add one rule in NSG to block traffic on specific port but when you request access it add rule in NSG to allow Traffic
+this will add one rule in NSG to block traffic on specific port but when you request access it add rule in NSG 
+to allow Traffic
 
 
 Azure identity protection  vs  Azure PIM                                            vs Azure JIT
@@ -206,9 +207,9 @@ You can only remove the lock by unassigning the blueprint
 
 Application objects :
 
-for an application to access and resource like storage account app object is created which can be used for RBAC roles to
-access any object and it can also be used as assume role for specific user accessing app and azure resources with same
-access
+for an application to access and resource like storage account app object is created which can be used for RBAC 
+roles to access any object and it can also be used as assume role for specific user accessing app and azure 
+resources with same access
 
 Azure key vault :
 
@@ -267,8 +268,8 @@ cool
 archive
 
 lifecycle rules
-file can be accessed from hot or cool tier so if the file is archived it has to rehydreted means moving to hot\cool
-cool tier is cost effective as compared to archive
+file can be accessed from hot or cool tier so if the file is archived it has to rehydreted means moving to 
+hot\cool, cool tier is cost effective as compared to archive
 cool tier data has to be 30 days and archive should be 180 else if you move then there will be early deletion fee
 
 storage account encryption :
@@ -285,8 +286,8 @@ Azure SQL :
 
 IAAS :
 
-You can use the Infrastructure as a service facility wherein you deploy Microsoft SQL Server on an Azure Virtual machine
-This will give you complete administrative access over the virtual machine
+You can use the Infrastructure as a service facility wherein you deploy Microsoft SQL Server on an Azure Virtual 
+machine,This will give you complete administrative access over the virtual machine
 Here you can also use the pay-as-you-go model when using SQL server on an Azure virtual machine
 This provides an easy option for migrating your on-premise SQL Server workloads
 Here you can install the version of SQL Server that you require
@@ -309,11 +310,11 @@ You can also use the Hybrid benefits to use your own licenses to save on costs
 
 SQL Auditing :
 
-You can enable auditing for an Azure SQL database and alsofor Azure Synapse Analytics
+You can enable auditing for an Azure SQL database and also for Azure Synapse Analytics
 This feature can be used to track database events and write them to an audit log
 The logs can be stored in an Azure storage account, Log Analytics workspace or Azure Event Hubs
-This helps in regulatory compliance. It helps to gain insights on any anomalies when it comes to database activities
-Auditing can be enabled at the database or server level
+This helps in regulatory compliance. It helps to gain insights on any anomalies when it comes to database 
+activities,Auditing can be enabled at the database or server level
 If it is applied at the server level, then it will be applied to all ofthe databases that reside on the server
 DB and LAW\ASA should be in same region
 
@@ -328,8 +329,10 @@ You can create a rule that can mask the data.
 Based on the rule you can decide on the amount of data to expose to the user
 
 There are different masking rules
-Credit Card masking rule –This is used to mask the column that contain credit card details. Here only the last four digits of the field are exposed.
-Email –Here first letter of the email address is exposed. And the domain name of the email address is replaced with XXX.com.
+Credit Card masking rule –This is used to mask the column that contain credit card details. Here only the last 
+four digits of the field are exposed.
+Email –Here first letter of the email address is exposed. And the domain name of the email address is replaced 
+with XXX.com.
 Custom text-Here you decide which characters to expose for a field.
 Random number-Here you can generate a random number for the field.
 
@@ -389,7 +392,8 @@ also available for read-only purposes.
 
 Azure backup :
 
-AB for vm can take one one backup copy for a day and instance resovery snapshot is saved on VM and retention is saved on vault
+AB for vm can take one backup copy for a day and instance resovery snapshot is saved on VM and retention is saved 
+on vault
 
 Key vault :
 
