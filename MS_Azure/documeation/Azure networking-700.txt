@@ -227,8 +227,8 @@ its a regional service
 
 private endpoint :
 
-here the public service is communicated through private ip from vnet attached to dedicated nic and there private DNS also created to
-add DNS records for public service
+here the public service is communicated through private ip from vnet attached to dedicated nic and there private 
+DNS also created to add DNS records for public service
 
 private link :
 
