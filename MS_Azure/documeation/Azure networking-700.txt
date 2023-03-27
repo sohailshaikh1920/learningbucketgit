@@ -38,10 +38,12 @@ then AAPGW make connection between user and backend system
 
 Webapp :
 
-set of infra with defined runtime and attached to service plan which defines what type of services you are going to get in webapp
+set of infra with defined runtime and attached to service plan which defines what type of services you are going 
+to get in webapp
 
-when webapp is configured as backend pool it will have error since webapp has its own URL name and AAPGW dont change the host url when
-transmitting it to backend pool for that you need to overwrite the hostname from client request in http settings in AAPGW
+when webapp is configured as backend pool it will have error since webapp has its own URL name and AAPGW dont 
+change the host url when transmitting it to backend pool for that you need to overwrite the hostname from client 
+request in http settings in AAPGW
 
 WAF :
 
@@ -50,7 +52,20 @@ FrontDoor
 Traffic Manager
 
 can be applied on AAPGW,listner,route
-lower level have bigger priority so if allow is attached on listner and deny on AAPGW then allow will work
+lower level have bigger priority so if WAF allow is attached on listner and deny on AAPGW then allow will work
+
+Security layers in Azure
+
+Ingress:
+
+NSG : NIC\subnet
+WAF : AAPGW,FD,TM
+
+Eagress:
+
+Azure FW : subnet through static route
+third party appliance like cloudguard 
+
 
 Traffic Manager :
 
@@ -97,13 +112,14 @@ waf policy is if then else statement which states that if condition matches then
 
 NAT GW :
 
-can be created for resources which doesnt have public ip associated for outbound connections and can be attached to
-subnet
+can be created for resources which doesnt have public ip associated for outbound connections and can be attached 
+to subnet
 
 user defined routes :
 
-to route traffic through particular vm need to create route table,route and then attach it to subnet, enable ip forwarding so that
-ip packet can be passed from middleware vm and then add route inside OS as well
+to route traffic through particular vm need to create route table,route and then attach it to subnet, enable ip 
+forwarding so that ip packet can be passed from middleware vm and then add route inside OS as well,this usually 
+required when there is appliance like cloudguard for eagress traffic.
 
 
 Point to site VPN
@@ -174,7 +190,8 @@ ASG
 
 Network Watcher
 
-connection monitor : can monitor traffic between source\dest on perticular port vm's should have network watcher agent
+connection monitor : can monitor traffic between source\dest on perticular port vm's should have network watcher 
+agent
 IP flow log : source\destination port is open or not can be checked
 next hop : is like tracert
 connnection troubleshoot : can go to VM and check inbound\outbound traffic like telnet
@@ -203,7 +220,8 @@ can be used to access public azure service via private vnet network\subnet trave
 
 service endpoint policy :
 
-can restrict to particular resource in public like specific storage account and rest storage account will be restricted
+can restrict to particular resource in public like specific storage account and rest storage account will be 
+restricted
 
 its a regional service
 
