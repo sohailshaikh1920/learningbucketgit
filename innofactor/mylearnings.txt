@@ -10,3 +10,11 @@ ssh-keygen -t rsa -b 2048
 SSO to authorize innofactor so that your laptop can use those keys
 6. git clone repo ssh path
 
+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
+
+git init 
+git add .
+git commit -m "new"
+git status
+git remote -v
+git push --set-upstream origin branchname
