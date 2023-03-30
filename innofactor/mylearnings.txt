@@ -1,0 +1,12 @@
+* how to clone private git repo
+1. create your git account
+2. create your repo as private
+3. install git cli and configure user and email parameter
+git config --global user.name "sohail shaikh"
+git config --global user.email "sohail.shaikh@innofactor.com"
+4. generate rsa key on your laptop
+ssh-keygen -t rsa -b 2048
+5. copy key from C:\Users\sohail.shaikh/.ssh/id_rsa and add it in github settings ssh keys and then configure 
+SSO to authorize innofactor so that your laptop can use those keys
+6. git clone repo ssh path
+
